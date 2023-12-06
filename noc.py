@@ -2,16 +2,9 @@
 
 
 from PIL import Image
-import requests
+
 
 import streamlit as st
-from streamlit_lottie import st_lottie
-
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json
 
 st.set_page_config(
     page_title="Multipage App",
@@ -24,7 +17,7 @@ st.title("Hi,:wave: WELCOME TO MY WEBLOG")
 import streamlit as st
 
     # --- LOAD ASSETS ---
-lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20fcfjwiyb.json")
+#lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20fcfjwiyb.json")
 img_contact_form = Image.open("images/my pic.jpg")
 # --- PROJECTS ---
 with st.container():
